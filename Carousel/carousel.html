@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+    <script src="carousel.js"></script>
+    <style>
+    /*Change width and height of class size*/
+      .size{
+        width: 500px;
+        height: 400px;
+      }
+      .gridB{
+        grid-area: "b";
+      }
+      .naStred{
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "a b c";
+        background-color: grey;
+      }
+      .laveGrid{
+        grid-area: "a";
+        width: 200px;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+  <div class="naStred">
+    <div class="laveGrid"></div>
+    <div class="gridB">
+      <button onclick="carouselLeft()">Previcious</button>
+      <div class="sizeOfMediaDiv size" id="main">
+        <div class="mediaChildDiv" id="one">
+          <img class="mediaImg size" src=".\srdce.jpg" alt="Srdce">
+          <img class="mediaImg size" src=".\ludia.jpg" alt="Srdce">
+          <img class="mediaImg size" src=".\harambe.jpg" alt="Srdce">
+          <img class="mediaImg size" src="./opica.jpg" alt="opica"/>
+          <img class="mediaImg size" src=".\srdce.jpg" alt="Srdce">
+        </div>
+      </div>
+      <button onclick="carouselRight()">Next</button>
+    </div>
+  </div>
+  </body>
+</html>

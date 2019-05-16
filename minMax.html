@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="asc"></p>
+    <p id="desc"></p>
+
+    <script>
+
+    var sano = [1, 2, 10, 5, 7,100, 3, 4, 5, 5];
+
+      function minToMax(erray) {
+        var i = 0;
+        var j = 0;
+        do {
+          var minus = erray[i] - erray[j];
+          if (minus < 0) {
+            var b = erray[i];
+            erray[i] = erray[j];
+            erray[j] = b;
+            j = 0;
+          }
+          else {
+            j += 1;
+            if (j == erray.length) {
+              i = i+1;
+              j = 0;
+            }
+          }
+        } while (i < erray.length);
+        return erray;
+      }
+
+      function maxToMin(erray) {
+        var i = 0;
+        var j = 0;
+        do {
+          var minus = erray[j] - erray[i];
+          if (minus < 0) {
+            var b = erray[i];
+            erray[i] = erray[j];
+            erray[j] = b;
+            j = 0;
+          }
+          else {
+            j += 1;
+            if (j == erray.length - 1) {
+              i = i+1;
+              j = 0;
+            }
+          }
+        } while (i < erray.length);
+        return erray;
+      }
+      document.getElementById('asc').innerHTML = minToMax(sano);
+      document.getElementById('desc').innerHTML = maxToMin(sano);
+    </script>
+  </body>
+</html>

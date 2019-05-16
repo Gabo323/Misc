@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Skákajúci kruh</title>
+    <style>
+
+    .fotka{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: black;
+    }
+    </style>
+  </head>
+  <body>
+<div id="div1" class="fotka"></div>
+
+    <script>
+
+      var ball = document.getElementById('div1');
+      var x = Math.random() * innerWidth;
+      var dx = 5;
+      var y = Math.random() * innerHeight;
+      var dy = 5;
+    setInterval(function bouncing() {
+
+      if (x > window.innerWidth - 150 || x < 0) {
+        dx = -dx;
+      }
+      if (y > window.innerHeight - 150 || y < 0) {
+      dy = -dy;
+      }
+      x += dx;
+      y += dy;
+      ball.style.left = x + "px";
+      ball.style.top = y + "px";
+    }, 10);
+
+
+    </script>
+  </body>
+</html>

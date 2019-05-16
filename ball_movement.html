@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    #ball{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      left: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="ball"></div>
+    <script type="text/javascript">
+
+    document.addEventListener('keydown', movingBall);
+
+    var ball = document.getElementById('ball');
+    var dx = 0;
+    var dy = 0;
+    
+function movingBall(e) {
+  var key = e.keyCode;
+  if (key == 39) {
+    dx += 5;
+    ball.style.left = dx + 'px';
+  }
+  if (key == 40) {
+    dy += 5;
+    ball.style.top = dy + 'px';
+  }
+  if (key == 37) {
+    dx -= 5;
+    ball.style.left = dx + 'px';
+  }
+  if (key == 38) {
+    dy -= 5;
+    ball.style.top = dy + 'px';
+  }
+  console.log(key);
+}
+    </script>
+  </body>
+</html>

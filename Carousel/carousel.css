@@ -1,0 +1,16 @@
+
+.sizeOfMediaDiv{
+  background-color: red;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.mediaChildDiv{
+  width: 10000000px;
+  height: 100%;
+  position: absolute;
+}
+.mediaImg{
+  display: inline-block;
+  float: left;
+}
